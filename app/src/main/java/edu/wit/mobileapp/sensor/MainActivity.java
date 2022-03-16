@@ -7,6 +7,7 @@ import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import java.util.HashMap;
 import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
@@ -40,5 +41,21 @@ public class MainActivity extends AppCompatActivity {
 
         //Set the message in the TextView
         text.setText(message);
+    }
+
+    private HashMap<Integer, String> sensorTypes = new HashMap<>();{
+        sensorTypes.put(Sensor.TYPE_ACCELEROMETER, "TYPE_ACCELEROMETER");
+        sensorTypes.put(Sensor.TYPE_GRAVITY, "TYPE_GRAVITY");
+        sensorTypes.put(Sensor.TYPE_GYROSCOPE, "TYPE_GYROSCOPE");
+        sensorTypes.put(Sensor.TYPE_LIGHT, "TYPE_LIGHT");
+        sensorTypes.put(Sensor.TYPE_LINEAR_ACCELERATION, "TYPE_LINEAR_ACCELERATION");
+        sensorTypes.put(Sensor.TYPE_MAGNETIC_FIELD, "TYPE_MAGNETIC_FIELD");
+        sensorTypes.put(Sensor.TYPE_ORIENTATION, "TYPE_ORIENTATION (deprecated)");
+        sensorTypes.put(Sensor.TYPE_PRESSURE, "TYPE_PRESSURE");
+        sensorTypes.put(Sensor.TYPE_PROXIMITY, "TYPE_PROXIMITY");
+        sensorTypes.put(Sensor.TYPE_RELATIVE_HUMIDITY, "TYPE_RELATIVE_HUMIDITY");
+        sensorTypes.put(Sensor.TYPE_GAME_ROTATION_VECTOR, "TYPE_GAME_ROTATION_VECTOR");
+        sensorTypes.put(Sensor.TYPE_ROTATION_VECTOR, "TYPE_ROTATION_VECTOR");
+        sensorTypes.put(Sensor.TYPE_TEMPERATURE, "TYPE_TEMPERATURE (deprecated)");
     }
 }
