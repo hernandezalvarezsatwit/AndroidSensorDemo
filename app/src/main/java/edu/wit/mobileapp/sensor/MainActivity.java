@@ -28,16 +28,17 @@ public class MainActivity extends AppCompatActivity {
         message.append("===================================\n\n");
 
         //For loop to append information
-        for(Sensor sensor : sensors){
-            message.append(sensor.getName()+"\n");
-            message.append("    Type: "+sensorTypes.get(sensor.getType())+"\n");
-            message.append("    Vendor: "+sensor.getVendor()+"\n");
-            message.append("    Version: "+sensor.getVersion()+"\n");
-            message.append("    Resolutions: "+sensor.getResolution()+"\n");
-            message.append("    Max Range: "+sensor.getMaximumRange()+"\n");
-            message.append("    Power: "+sensor.getPower()+"mA\n\n");
+        for(Sensor s : sensors){
+            message.append(s.getName()+"\n");
+            message.append("    Type: "+sensorTypes.get(s.getType())+"\n");
+            message.append("    Vendor: "+s.getVendor()+"\n");
+            message.append("    Version: "+s.getVersion()+"\n");
+            message.append("    Resolutions: "+s.getResolution()+"\n");
+            message.append("    Max Range: "+s.getMaximumRange()+"\n");
+            message.append("    Power: "+s.getPower()+"mA\n\n");
         }
 
+        //Set the message in the TextView
         text.setText(message);
     }
 }
