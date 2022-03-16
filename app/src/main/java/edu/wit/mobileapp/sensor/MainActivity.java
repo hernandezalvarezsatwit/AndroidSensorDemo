@@ -43,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
         text.setText(message);
     }
 
-    private HashMap<Integer, String> sensorTypes = new HashMap<>();{
+    HashMap<Integer, String> sensorTypes = new HashMap<>();
+
+    {
         sensorTypes.put(Sensor.TYPE_ACCELEROMETER, "TYPE_ACCELEROMETER");
         sensorTypes.put(Sensor.TYPE_GRAVITY, "TYPE_GRAVITY");
         sensorTypes.put(Sensor.TYPE_GYROSCOPE, "TYPE_GYROSCOPE");
