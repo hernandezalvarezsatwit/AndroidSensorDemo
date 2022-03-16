@@ -29,21 +29,21 @@ public class MainActivity extends AppCompatActivity {
         message.append("===================================\n\n");
 
         //For loop to append information
-        for(Sensor s : sensors){
-            message.append(s.getName()+"\n");
-            message.append("    Type: "+sensorTypes.get(s.getType())+"\n");
-            message.append("    Vendor: "+s.getVendor()+"\n");
-            message.append("    Version: "+s.getVersion()+"\n");
-            message.append("    Resolutions: "+s.getResolution()+"\n");
-            message.append("    Max Range: "+s.getMaximumRange()+"\n");
-            message.append("    Power: "+s.getPower()+"mA\n\n");
-        }
+        sensors.forEach(s -> {
+            message.append(s.getName() + "\n");
+            message.append("    Type: " + sensorTypes.get(s.getType()) + "\n");
+            message.append("    Vendor: " + s.getVendor() + "\n");
+            message.append("    Version: " + s.getVersion() + "\n");
+            message.append("    Resolutions: " + s.getResolution() + "\n");
+            message.append("    Max Range: " + s.getMaximumRange() + "\n");
+            message.append("    Power: " + s.getPower() + "mA\n\n");
+        });
 
         //Set the message in the TextView
         text.setText(message);
     }
 
-    HashMap<Integer, String> sensorTypes = new HashMap<>();
+    private HashMap<Integer, String> sensorTypes = new HashMap<>();
 
     {
         sensorTypes.put(Sensor.TYPE_ACCELEROMETER, "TYPE_ACCELEROMETER");
